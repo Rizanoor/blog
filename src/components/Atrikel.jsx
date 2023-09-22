@@ -1,14 +1,8 @@
 export default function Artikel(props) {
-
-    return (
-      <>
-        <div>Ini adalah component artikel {props.name}</div>
-        <div>
-          {props.titles.map((title, index) => (
-            <div key={index}>- {title}</div>
-          ))}
-        </div>
-      </>
-    )
-  }
-  
+  return (
+    <>
+      <h3>{props.title}</h3>
+      <small>Date: {props.date}, tags: {props.tags ? props.tags.join(", ") : ""}</small>
+    </>
+  )
+}
