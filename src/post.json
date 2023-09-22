@@ -2,21 +2,28 @@
     {
         "title" : "tutorial basic react js",
         "tags" : ["react", "frontend"],
-        "date" : "2023-01-01"
+        "date" : "2023-01-01",
+        "isNew" : true
     },
     {
         "title" : "belajar vite js",
         "tags" : ["vite", "frontend"],
-        "date" : "2023-01-02"
+        "date" : "2023-01-02",
+        "isNew" : false
+
     },
     {
         "title" : "tutorial expressjs",
         "tags" : ["express", "backend"],
-        "date" : "2023-02-03"
+        "date" : "2023-02-03",
+        "isNew" : true
+
     },
     {
         "title" : "meningkatan pengetahuan vue js",
         "tags" : ["vuejs", "frontend"],
-        "date" : "2023-01-04"
+        "date" : "2023-01-04",
+        "isNew" : false
+
     }
 ]
