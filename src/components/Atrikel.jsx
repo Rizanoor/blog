@@ -1,16 +1,11 @@
-export default function Artikel() {
-    const name = 'Riza';
-    const titles = [
-      'tutorial',
-      'tutorial nextjs',
-      'ada pun tutorial'
-    ]
+export default function Artikel(props) {
+
     return (
       <>
-        <div>Ini adalah component artikel {name}</div>
+        <div>Ini adalah component artikel {props.name}</div>
         <div>
-          {titles.map((title, index) => (
-            <div key={index}>{title}</div>
+          {props.titles.map((title, index) => (
+            <div key={index}>- {title}</div>
           ))}
         </div>
       </>

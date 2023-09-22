@@ -5,8 +5,9 @@ function App() {
 
   return (
     <>
-      <Atrikel/>
-      <Atrikel/>
+      <Atrikel name="riza" titles={['reactjs', 'nuxtjs', 'nodejs']}/>
+      <br />
+      <Atrikel name="jasiman" titles={['expressjs', 'vuejs', 'nodejs']}/>
     </>
   )
 }
