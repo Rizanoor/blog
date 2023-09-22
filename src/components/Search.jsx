@@ -13,7 +13,7 @@ export default function Search(props) {
         <div>
           Cari artikel: <input onChange={onSearchChange}></input>
         </div>
-        <div className="">Ditemukan 0 data dengan pencarian kata <b>{search}</b></div>
+        <div className="">Ditemukan {props.totalPosts} data dengan pencarian kata <b>{search}</b></div>
         
     </>
   )
