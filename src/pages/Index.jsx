@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import postsData from "../post.json";
 import Artikel from "../components/atrikel";
 import Search from "../components/Search";
 
 export default function Homepage() {
-  const [posts, setPosts] = useState(postsData);
   const [totalPosts, setTotalPosts] = useState(0);
-  const [externalPosts, setExternalPosts] = useState([]);
+  const [posts, setPosts] = useState(postsData);
 
   const searchChange = (value) => {
       const filteredPosts = postsData.filter((item) => 
@@ -15,17 +14,6 @@ export default function Homepage() {
       setPosts(filteredPosts);
       setTotalPosts(filteredPosts.length);
   }
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => setExternalPosts(json))
-  }, []);
-
-  useEffect(() => {
-    console.log('ada post baru');
-  }, [posts]);
-
   return (
     <>
         <h1>simple blog</h1>
@@ -33,11 +21,7 @@ export default function Homepage() {
         {posts.map((props, index) => (
           <Artikel { ...props} key={index}/>
         ))}
-        <hr/>
-        <h2>External Posts</h2>
-        {externalPosts.map((item, index) => (
-          <div key={index}>- {item.title}</div>
-        ))}
+       
     </>
   )
 }
